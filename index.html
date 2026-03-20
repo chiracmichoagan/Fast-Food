@@ -5,11 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link href="./output.css" rel="stylesheet"> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <title>Document</title>
 
     <style>
+        body {
+            background-color: #F9F7F2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         .shape {
             position: absolute;
             top: 0;
@@ -30,25 +44,62 @@
 
         <div class="flex">
             <!-- Logo -->
-            <div class="ml-20 p-2 pl-20 font-bold">Fast Food</div>
+            <div class="ml-20 p-2 pl-20 font-bold"><a href="/">Fast Food</a></div>
             <div class="flex flex-1 justify-end items-center gap-20">
                 <!-- Navigation -->
                 <div class="">
-                    <nav>
-                        <ul class="flex gap-4 font-bold ">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Menu</a></li>
-                            <li><a href="#">Testimonials</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact us</a></li>
-                        </ul>
+                    <nav class="hidden md:flex space-x-8 font-bold text-gray-700">
+                        <a href="#hero" class="relative group hover:text-[#ffffff] transition-colors duration-300">
+                            Home
+                            <span
+                                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ffffff] transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="#about" class="relative group hover:text-[#ffffff] transition-colors duration-300">
+                            About Us
+                            <span
+                                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ffffff] transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="#menu" class="relative group hover:text-[#ffffff] transition-colors duration-300">
+                            Menu
+                            <span
+                                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ffffff] transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="#testimonials"
+                            class="relative group hover:text-[#ffffff] transition-colors duration-300">
+                            Testimonials
+                            <span
+                                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ffffff] transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="#footer" class="relative group hover:text-[#ffffff] transition-colors duration-300">
+                            Contact us
+                            <span
+                                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ffffff] transition-all duration-300 group-hover:w-full"></span>
+                        </a>
                     </nav>
                 </div>
                 <!-- icons -->
                 <div class="mr-20 flex gap-2">
-                    <button>search</button>
-                    <button>shop</button>
+                    <button class="hover:text-[#ffffff] transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-search-icon lucide-search">
+                            <path d="m21 21-4.34-4.34" />
+                            <circle cx="11" cy="11" r="8" />
+                        </svg>
+                    </button>
+
+                    <button class="relative hover:text-[#ffffff] transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-shopping-cart-icon lucide-shopping-cart">
+                            <circle cx="8" cy="21" r="1" />
+                            <circle cx="19" cy="21" r="1" />
+                            <path
+                                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                        </svg>
+                        <span
+                            class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -59,11 +110,13 @@
 
 
     <!-- main -->
+    <main>
 
-    <section class="flex items-center gap-20 pb-20">
-        <svg class="absolute  h-[100%] w-full -z-10 rounded-bl-[150px] md:rounded-bl-[300px] md:w-1/2 top-0 right-0"
-            viewBox="0 0 700 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="
+        <!-- Hero Section -->
+        <section id="hero" class="flex items-center gap-20 pb-20">
+            <svg class="absolute  h-[100%] w-full -z-10 rounded-bl-[150px] md:rounded-bl-[300px] md:w-1/2 top-0 right-0"
+                viewBox="0 0 700 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="
     M 110,0
     C 20,0  02,60  100,100
     C 180,140  195,140  160,185
@@ -72,281 +125,469 @@ C 90,245  205,300  260,300
     L 700,0
     Z
   " fill="#FFC529" />
-        </svg>
+            </svg>
 
-        <div class="pl-20 ml-20   mt-5 pt-40">
-            <span class="text-orange-500 font-semibold border-l-4 border-orange-500 pl-3"> Fast Food Restaurant</span>
-            <h1 class="text-2xl md:text-3xl font-bold leading-tight mt-2">
-                We Serve
-            </h1>
-            <h2 class="text-5xl md:text-7xl font-bold text-gray-800 mt-4">
-                Delicious
-                <span class="text-orange-400">Food</span>
-            </h2>
-            <p class="text-gray-600 mt-6">
-                Keep it easy with those simple but delicious recipes from make-ahead lunches and midweek meals to
-                fuss-free sides.
-            </p>
-            <button
-                class="bg-[#FFC529] mt-6 hover:bg-black hover:text-white transition-all duration-300 px-8 py-3 rounded-full font-bold shadow-lg">
-                Get started
-            </button>
-        </div>
-
-
-        <div class="w-full md:w-1/2 relative flex justify-center items-center min-h-[450px]">
-
-            <!-- Image principale (grande, centrée) -->
-            <div
-                class="relative z-10 w-56 h-56 md:w-72 md:h-72 rounded-full border-[8px] border-white shadow-2xl overflow-hidden">
-                <img src="./assets/images/anh-nguyen-kcA-c3f_3FE-unsplash.jpg" alt="Main Dish"
-                    class="w-full h-full object-cover">
-            </div>
-
-            <!-- Petite image haut-droite -->
-            <div class="relative pt-80 mt-10 mr-20 translate-y-12">
-                <div
-                    class="absolute -bottom-13 -right-1 w-24 h-24 md:w-40 md:h-40 rounded-full border-4 border-white shadow-xl overflow-hidden z-20">
-                    <img src="./assets/images/sina-piryae-bBzjWthTqb8-unsplash.jpg" class="w-full h-full object-cover">
-                </div>
-                <!-- Petite image bas-gauche -->
-                <div
-                    class="absolute bottom-10 left-10  w-20 h-20 md:w-40 md:h-40 rounded-full border-4 border-white shadow-xl overflow-hidden z-20">
-                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=400"
-                        class="w-full h-full object-cover">
-                </div>
-                <!-- Petite image bas-droite -->
-                <div
-                    class="absolute -bottom-14 right-60  w-20 h-20 md:w-36 md:h-36 rounded-full border-4 border-white shadow-xl overflow-hidden z-20">
-                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&q=80&w=400"
-                        class="w-full h-full object-cover">
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- About us section -->
-    <section id="about" class="relative py-20 px-6 mt-20 p-0 m-0  mr-10 ml-20 md:px-16">
-        <div class="container mx-auto flex flex-col md:flex-row items-center  md:gap-0">
-
-            <!-- Partie gauche : image -->
-            <div class="w-full md:w-1/2 relative flex justify-center items-center min-h-[420px]" data-aos="fade-right">
-
-                <!-- Forme jaune derrière (rectangle arrondi) -->
-                <svg class="absolute top-5 left-10 pl-15 w-[58%] h-[92%] -z-10" viewBox="0 0 300 380"
-                    preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="
-    M 132 2 L 250 0 C 280 0 300 20 300 50 L 300 265 L 193 266 C -24 274 12 240 19 164 C 40 54 5 -1 77 1 Z
-  " fill="#FDBA31" />
-                </svg>
-
-                <!-- Image principale ronde -->
-                <div
-                    class="relative z-10 w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl mr-20 top-5 bottom-10">
-                    <img src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?auto=format&fit=crop&q=80"
-                        alt="About Food" class="w-full h-full object-cover">
-                </div>
-
-                <!-- Boîte Gino en bas-gauche qui dépasse -->
-                <div class="absolute -bottom-10 left-12 mt-50 w-28 md:w-36 z-30 drop-shadow-2xl">
-                    <img src="./assets/images/tomate_boite.png" alt="Gino Tomato" class="w-full h-full object-contain">
-                </div>
-
-            </div>
-
-            <!-- Partie droite : texte -->
-            <div class="w-full md:w-1/2 space-y-6 mb-10 mr-20" data-aos="fade-left">
-                <h2 class="text-4xl md:text-5xl font-bold text-slate-900">
-                    About <span class="text-[#FDBA31]">Us</span>
+            <div data-aos="fade-right" class="pl-20 ml-20   mt-5 pt-40">
+                <span class="text-orange-500 font-semibold border-l-4 border-orange-500 pl-3"> Fast Food
+                    Restaurant</span>
+                <h1 class="text-2xl md:text-3xl font-bold leading-tight mt-2">
+                    We Serve
+                </h1>
+                <h2 class="text-5xl md:text-7xl font-bold text-gray-800 mt-4">
+                    Delicious
+                    <span class="text-orange-400">Food</span>
                 </h2>
-                <div class="space-y-4 text-gray-600 text-lg leading-relaxed">
-                    <p>
-                        Keep healthy food readily available. When you get hungry, you're more likely to eat the
-                        first thing you see on the counter. Keep health food readily available.
-                        When you get hungry, you're more likely to eat the first thing you see on the counter.
-                    </p>
-                </div>
+                <p class="text-gray-600 mt-6">
+                    Keep it easy with those simple but delicious recipes from make-ahead lunches and midweek meals to
+                    fuss-free sides.
+                </p>
                 <button
-                    class="border-2 border-yellow-400 text-slate-900 px-8 py-3 rounded-full font-medium hover:bg-[#FDBA31] hover:border-[#FDBA31] transition-all duration-300">
-                    View more
+                    class="bg-[#FFC529] mt-6 hover:bg-black hover:text-white transition-all duration-300 px-8 py-3 rounded-full font-bold shadow-lg">
+                    ORDER NOW
                 </button>
             </div>
 
-        </div>
-    </section>
-    <!-- end About us section -->
 
+            <div class="w-full md:w-1/2 relative flex justify-center items-center min-h-[450px]">
 
-    <!-- Most Popular Food -->
-    <section id="popular-food" class="py-24 px-6 md:px-16">
-        <div class="container mx-auto text-center py-10">
-            <h2 class="text-4xl md:text-5xl font-bold text-slate-900" data-aos="fade-down">
-                Most Popular <span class="text-[#FDBA31]">Food</span>
-            </h2>
-        </div>
-
-        <div class="container  grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-10 mt-16 items-end">
-
-            <!-- Carte 1 -->
-            <div class="bg-white mb-20 rounded-[24px] shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-500"
-                data-aos="fade-up" data-aos-delay="100">
-                <!-- Image en haut de la carte -->
-                <div class="w-full h-30 orverflow-hidden">
-                    <img src="./assets/images/13.jpg" alt="Breakfast"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <!-- Image principale (grande, centrée) -->
+                <div data-aos="zoom-in-down"
+                    class="relative z-10 w-56 h-56 md:w-72 md:h-72 rounded-full border-[8px] border-white shadow-2xl overflow-hidden">
+                    <img src="./assets/images/anh-nguyen-kcA-c3f_3FE-unsplash.jpg" alt="Main Dish"
+                        class="w-full h-full object-cover">
                 </div>
-                <!-- Contenu bas de carte -->
-                <div class="p-5 space-y-4">
-                    <div class="flex justify-between items-center">
-                        <h3 class="font-bold text-lg text-slate-800">Breakfast Food</h3>
-                        <button
-                            class="bg-[#FDBA31] text-[10px] px-3 py-1.5 rounded-md text-white font-bold uppercase tracking-tight hover:bg-slate-900 transition-colors">
-                            Add to cart
-                        </button>
+
+                <!-- Petite image haut-droite -->
+                <div data-aos="zoom-in-down" class="relative pt-80 mt-10 mr-20 translate-y-12">
+                    <div
+                        class="absolute -bottom-13 -right-1 w-24 h-24 md:w-40 md:h-40 rounded-full border-4 border-white shadow-xl overflow-hidden z-20">
+                        <img src="./assets/images/sina-piryae-bBzjWthTqb8-unsplash.jpg"
+                            class="w-full h-full object-cover">
                     </div>
-                    <div class="flex justify-between items-center pt-3 border-t border-gray-100">
-                        <div class="flex text-[#FDBA31] text-xs space-x-0.5">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <!-- Petite image bas-gauche -->
+                    <div
+                        class="absolute bottom-10 left-10  w-20 h-20 md:w-40 md:h-40 rounded-full border-4 border-white shadow-xl overflow-hidden z-20">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=400"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- Petite image bas-droite -->
+                    <div
+                        class="absolute -bottom-14 right-60  w-20 h-20 md:w-36 md:h-36 rounded-full border-4 border-white shadow-xl overflow-hidden z-20">
+                        <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&q=80&w=400"
+                            class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- end Hero Section -->
+
+
+        <!-- About us section -->
+        <section id="about" class="relative py-20 px-6 mt-20 p-0 m-0  mr-10 ml-20 md:px-16">
+            <div class="container mx-auto flex flex-col md:flex-row items-center  md:gap-0">
+
+                <!-- Partie gauche : image -->
+                <div class="w-full md:w-1/2 relative flex justify-center items-center min-h-[420px]"
+                    data-aos="fade-right">
+
+                    <!-- Forme jaune derrière (rectangle arrondi) -->
+                    <svg class="absolute top-5 left-10 pl-15 w-[58%] h-[92%] -z-10" viewBox="0 0 300 380"
+                        preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="
+    M 132 2 L 250 0 C 280 0 300 20 300 50 L 300 265 L 193 266 C -24 274 12 240 19 164 C 40 54 5 -1 77 1 Z
+  " fill="#FDBA31" />
+                    </svg>
+
+                    <!-- Image principale ronde -->
+                    <div
+                        class="relative z-10 w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl mr-20 top-5 bottom-10">
+                        <img src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?auto=format&fit=crop&q=80"
+                            alt="About Food" class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Boîte Gino en bas-gauche qui dépasse -->
+                    <div class="absolute -bottom-10 left-12 mt-50 w-28 md:w-36 z-30 drop-shadow-2xl">
+                        <img src="./assets/images/tomate_boite.png" alt="Gino Tomato"
+                            class="w-full h-full object-contain">
+                    </div>
+
+                </div>
+
+                <!-- Partie droite : texte -->
+                <div class="w-full md:w-1/2 space-y-6 mb-10 mr-20" data-aos="fade-left">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900">
+                        About <span class="text-[#FDBA31]">Us</span>
+                    </h2>
+                    <div class="space-y-4 text-gray-600 text-lg leading-relaxed">
+                        <p>
+                            Keep healthy food readily available. When you get hungry, you're more likely to eat the
+                            first thing you see on the counter. Keep health food readily available.
+                            When you get hungry, you're more likely to eat the first thing you see on the counter.
+                        </p>
+                    </div>
+                    <button
+                        class="border-2 border-yellow-400 text-slate-900 px-8 py-3 rounded-full font-medium hover:bg-[#FDBA31] hover:border-[#FDBA31] transition-all duration-300">
+                        View more
+                    </button>
+                </div>
+
+            </div>
+        </section>
+        <!-- end About us section -->
+
+
+        <!-- Most Popular Food -->
+        <section id="menu" class="py-24 px-6 md:px-16">
+            <div class="container mx-auto text-center py-10">
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900" data-aos="fade-down">
+                    Most Popular <span class="text-[#FDBA31]">Food</span>
+                </h2>
+            </div>
+
+            <div class="container  grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-10 mt-16 items-end">
+
+                <!-- Carte 1 -->
+                <div class="bg-white mb-20 rounded-[24px] shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-500"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <!-- Image en haut de la carte -->
+                    <div class="w-full h-30 orverflow-hidden">
+                        <img src="./assets/images/13.jpg" alt="Breakfast"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <!-- Contenu bas de carte -->
+                    <div class="p-5 space-y-4">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg text-slate-800">Breakfast Food</h3>
+                            <button
+                                class="bg-[#FDBA31] text-[10px] px-3 py-1.5 rounded-md text-white font-bold uppercase tracking-tight hover:bg-slate-900 transition-colors">
+                                Add to cart
+                            </button>
                         </div>
-                        <span class="font-bold text-base text-slate-900">₦ 15,000</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Carte 2 (milieu — surélevée + bordure jaune) -->
-            <div class="bg-white rounded-[24px] shadow-2xl  overflow-hidden group border-2 border-[#FDBA31] "
-                data-aos="fade-up" data-aos-delay="200">
-                <div class="w-full h-30 overflow-hidden">
-                    <img src="./assets/images/carly-jayne-Lv174o7fn7Y-unsplash.jpg" alt="Lunch"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="p-5 space-y-4">
-                    <div class="flex justify-between items-center">
-                        <h3 class="font-bold text-lg text-slate-800">Lunch Food</h3>
-                        <button
-                            class="bg-[#FDBA31] text-[10px] px-3 py-1.5 rounded-md text-white font-bold uppercase tracking-tight hover:bg-slate-900 transition-colors">
-                            Add to cart
-                        </button>
-                    </div>
-                    <div class="flex justify-between items-center pt-3 border-t border-gray-100">
-                        <div class="flex text-[#FDBA31] text-xs space-x-0.5">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <div class="flex justify-between items-center pt-3 border-t border-gray-100">
+                            <div class="flex text-[#FDBA31] text-xs space-x-0.5">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="font-bold text-base text-slate-900">₦ 15,000</span>
                         </div>
-                        <span class="font-bold text-base text-slate-900">₦ 25,000</span>
                     </div>
                 </div>
-            </div>
 
-            <!-- Carte 3 -->
-            <div class="bg-white rounded-[24px] shadow-lg mb-20 overflow-hidden group hover:shadow-2xl transition-all duration-500 "
-                data-aos="fade-up" data-aos-delay="300">
-                <div class="w-full h-30 overflow-hidden">
-                    <img src="./assets/images/10.jpg" alt="Dinner"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="p-5 space-y-4">
-                    <div class="flex justify-between items-center">
-                        <h3 class="font-bold text-lg text-slate-800">Dinner Food</h3>
-                        <button
-                            class="bg-[#FDBA31] text-[10px] px-3 py-1.5 rounded-md text-white font-bold uppercase tracking-tight hover:bg-slate-900 transition-colors">
-                            Add to cart
-                        </button>
+                <!-- Carte 2 (milieu — surélevée + bordure jaune) -->
+                <div class="bg-white rounded-[24px] shadow-2xl  overflow-hidden group border-2 border-[#FDBA31] "
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-full h-30 overflow-hidden">
+                        <img src="./assets/images/carly-jayne-Lv174o7fn7Y-unsplash.jpg" alt="Lunch"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <div class="flex justify-between items-center pt-3 border-t border-gray-100">
-                        <div class="flex text-[#FDBA31] text-xs space-x-0.5">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <div class="p-5 space-y-4">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg text-slate-800">Lunch Food</h3>
+                            <button
+                                class="bg-[#FDBA31] text-[10px] px-3 py-1.5 rounded-md text-white font-bold uppercase tracking-tight hover:bg-slate-900 transition-colors">
+                                Add to cart
+                            </button>
                         </div>
-                        <span class="font-bold text-base text-slate-900">₦ 45,000</span>
+                        <div class="flex justify-between items-center pt-3 border-t border-gray-100">
+                            <div class="flex text-[#FDBA31] text-xs space-x-0.5">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="font-bold text-base text-slate-900">₦ 25,000</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
-
-        <!-- Pagination dots -->
-        <div class="flex justify-center mt-16 gap-3">
-            <button class="w-3 h-3 rounded-full bg-gray-300 hover:bg-[#FDBA31] transition-colors"></button>
-            <button class="w-3 h-3 rounded-full bg-[#FDBA31] shadow-md shadow-yellow-500/50"></button>
-            <button class="w-3 h-3 rounded-full bg-gray-300 hover:bg-[#FDBA31] transition-colors"></button>
-        </div>
-    </section>
-    <!-- End Most Popular Food -->
-
-
-
-    <!-- Why choose our Food? -->
-    <section id="features" class="py-24 px-6 md:px-16">
-        <div class="container mx-auto text-center mb-20">
-            <h2 class="text-4xl md:text-5xl font-bold text-slate-900" data-aos="fade-down">
-                Why choose our <span class="text-[#FDBA31]">Food ?</span>
-            </h2>
-        </div>
-
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center ">
-
-            <div class="flex flex-col shadow-sm w-100 border-1 m-10  p-10 items-start text-left  space-y-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-12 h-12 bg-yellow-100/50 rounded-full flex items-center justify-center">
-                    <div class="w-8 h-8 bg-[#FDBA31] rounded-full flex items-center justify-center text-white">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2L1 21h22L12 2zm0 3.45l8.27 14.3H3.73L12 5.45z" />
-                        </svg>
+                <!-- Carte 3 -->
+                <div class="bg-white rounded-[24px] shadow-lg mb-20 overflow-hidden group hover:shadow-2xl transition-all duration-500 "
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-full h-30 overflow-hidden">
+                        <img src="./assets/images/10.jpg" alt="Dinner"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5 space-y-4">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg text-slate-800">Dinner Food</h3>
+                            <button
+                                class="bg-[#FDBA31] text-[10px] px-3 py-1.5 rounded-md text-white font-bold uppercase tracking-tight hover:bg-slate-900 transition-colors">
+                                Add to cart
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center pt-3 border-t border-gray-100">
+                            <div class="flex text-[#FDBA31] text-xs space-x-0.5">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="font-bold text-base text-slate-900">₦ 45,000</span>
+                        </div>
                     </div>
                 </div>
-                <h3 class="text-2xl font-bold text-slate-900">Quality Food</h3>
-                <p class="text-gray-500 leading-relaxed text-sm">
-                    Keep healthy food readily available. when you get hungry you're more likely to eat
-                </p>
+
             </div>
 
-            <div class="bg-white p-10 w-100 border-1 rounded-lg m-10 shadow-2xl shadow-white-200/200 flex flex-col items-start text-left space-y-4 z-10 border border-gray-50"
-                data-aos="zoom-in" data-aos-delay="200">
-                <div class="w-12 h-12 bg-yellow-100/50 rounded-full flex items-center justify-center">
-                    <div class="w-8 h-8 bg-[#FDBA31] rounded-full flex items-center justify-center text-white">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z" />
-                        </svg>
+            <!-- Pagination dots -->
+            <div class="flex justify-center mt-16 gap-3">
+                <button class="w-3 h-3 rounded-full bg-gray-300 hover:bg-[#FDBA31] transition-colors"></button>
+                <button class="w-3 h-3 rounded-full bg-[#FDBA31] shadow-md shadow-yellow-500/50"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 hover:bg-[#FDBA31] transition-colors"></button>
+            </div>
+        </section>
+        <!-- End Most Popular Food -->
+
+
+
+        <!-- Why choose our Food? -->
+        <section id="blog" class="py-24 px-6 md:px-16">
+            <div class="container mx-auto text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900" data-aos="fade-down">
+                    Why choose our <span class="text-[#FDBA31]">Food ?</span>
+                </h2>
+            </div>
+
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center ">
+
+                <div class="flex flex-col shadow-sm w-100 border-1 m-10  p-10 items-start text-left  space-y-4"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-yellow-100/50 rounded-full flex items-center justify-center">
+                        <div class="w-8 h-8 bg-[#FDBA31] rounded-full flex items-center justify-center text-white">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L1 21h22L12 2zm0 3.45l8.27 14.3H3.73L12 5.45z" />
+                            </svg>
+                        </div>
                     </div>
+                    <h3 class="text-2xl font-bold text-slate-900">Quality Food</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm">
+                        Keep healthy food readily available. when you get hungry you're more likely to eat
+                    </p>
                 </div>
-                <h3 class="text-2xl font-bold text-slate-900">Super Taste</h3>
-                <p class="text-gray-500 leading-relaxed text-sm">
-                    Keep healthy food readily available. when you get hungry you're more likely to eat
-                </p>
-            </div>
 
-            <div class="flex flex-col p-10 border-1 w-100 shadow-sm m-10 items-start text-left  space-y-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-12 h-12 bg-yellow-100/50 rounded-full flex items-center justify-center">
-                    <div class="w-8 h-8 bg-[#FDBA31] rounded-full flex items-center justify-center text-white">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
-                        </svg>
+                <div class="bg-white p-10 w-100 border-1 rounded-lg m-10 shadow-2xl shadow-white-200/200 flex flex-col items-start text-left space-y-4 z-10 border border-gray-50"
+                    data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-yellow-100/50 rounded-full flex items-center justify-center">
+                        <div class="w-8 h-8 bg-[#FDBA31] rounded-full flex items-center justify-center text-white">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z" />
+                            </svg>
+                        </div>
                     </div>
+                    <h3 class="text-2xl font-bold text-slate-900">Super Taste</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm">
+                        Keep healthy food readily available. when you get hungry you're more likely to eat
+                    </p>
                 </div>
-                <h3 class="text-2xl font-bold text-slate-900">Fast Delivery</h3>
-                <p class="text-gray-500 leading-relaxed text-sm">
-                    Keep healthy food readily available. when you get hungry you're more likely to eat
-                </p>
+
+                <div class="flex flex-col p-10 border-1 w-100 shadow-sm m-10 items-start text-left  space-y-4"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-yellow-100/50 rounded-full flex items-center justify-center">
+                        <div class="w-8 h-8 bg-[#FDBA31] rounded-full flex items-center justify-center text-white">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">Fast Delivery</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm">
+                        Keep healthy food readily available. when you get hungry you're more likely to eat
+                    </p>
+                </div>
+
+            </div>
+        </section>
+        <!-- En Why choose our Food? -->
+
+
+
+
+
+        <!-- Our Customers Say -->
+        <section id="testimonials" class="py-24 px-6 mt-20 p-0 m-0  mr-10 ml-20 md:px-16">
+            <div class="container mx-auto text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900" data-aos="fade-down">
+                    Our Customers <span class="text-[#FDBA31]">Say</span>
+                </h2>
             </div>
 
-        </div>
-    </section>
-    <!-- En Why choose our Food? -->
+            <div class="container mx-auto flex flex-col md:flex-row items-center gap-12">
 
+                <!-- Partie gauche : témoignage -->
+                <div class="w-full md:w-1/2 space-y-8" data-aos="fade-right">
 
+                    <!-- Profil actif -->
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
+                            alt="Ojekemi Emmanuel"
+                            class="w-14 h-14 rounded-full object-cover border-2 border-[#FDBA31]">
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-900">Ojekemi Emmanuel</h4>
+                            <div class="flex text-[#FDBA31] text-sm mt-1">
+                                <svg class="w-4 h-4 fill-[#FDBA31]" viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-[#FDBA31]" viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-[#FDBA31]" viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-[#FDBA31]" viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-[#FDBA31]" viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- Citation -->
+                    <p class="text-gray-600 text-lg leading-relaxed italic">
+                        "Keep healthy food readily available. When you get hungry, you're more likely to eat the first
+                        thing
+                        you see on the counter."
+                    </p>
+
+                    <!-- Slider avatars -->
+                    <div class="flex items-center gap-4 mt-6">
+                        <!-- Flèche gauche -->
+                        <button
+                            class="text-gray-400 hover:text-[#FDBA31] transition-colors text-xl font-bold">‹</button>
+
+                        <!-- Avatars -->
+                        <div class="flex gap-3 items-center">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200"
+                                class="w-10 h-10 rounded-full object-cover opacity-60 hover:opacity-100 cursor-pointer transition-opacity border-2 border-transparent hover:border-[#FDBA31]">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
+                                class="w-12 h-12 rounded-full object-cover border-2 border-[#FDBA31] cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=200"
+                                class="w-10 h-10 rounded-full object-cover opacity-60 hover:opacity-100 cursor-pointer transition-opacity border-2 border-transparent hover:border-[#FDBA31]">
+                        </div>
+
+                        <!-- Flèche droite -->
+                        <button
+                            class="text-gray-400 hover:text-[#FDBA31] transition-colors text-xl font-bold">›</button>
+                    </div>
+
+                </div>
+
+                <!-- Partie droite : image + forme jaune -->
+                <!-- Partie droite : image + forme jaune -->
+                <div class="w-full md:w-1/2 relative flex justify-center items-center min-h-[320px]"
+                    data-aos="fade-left">
+
+                    <!-- Forme jaune SVG derrière -->
+                    <svg class="absolute right-30 top-0 w-[45%] h-full -z-10" viewBox="0 0 300 320"
+                        preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="
+     M 60 0 L 260 0 C 285 0 300 15 300 40 L 301 216 C 264 223 257 223 246 219 L 205 201 C 160 204 155 222 129 181 C 101 185 104 182 37 186 C 41 128 20 0 60 0 Z
+      " fill="#FDBA31" />
+                    </svg>
+
+                    <!-- Image plat (grande, centrée) -->
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=600"
+                        alt="Food" class="relative z-10 w-64 mr-16  h-64 object-cover rounded-full shadow-xl">
+
+                    <!-- Image bouteille (bas-droite, dépasse) -->
+                    <img src="./assets/images/champagne-bouteille.png" alt="Bottle"
+                        class="absolute bottom-18 right-20  z-20 w-56 h-60 object-cover drop-shadow-2xl">
+                </div>
+
+            </div>
+        </section>
+        <!-- End Our Customers Say -->
+    </main>
     <!-- end main -->
 
 
     <!-- footer -->
+    <footer id="footer" class="relative pt-20 pb-10 overflow-hidden">
+        <div class="container mx-auto px-6 md:px-16 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 items-start">
+
+                <div class="relative">
+                    <h2 class="text-2xl font-bold tracking-tighter text-slate-900 mb-8">Fast Food</h2>
+                    <div class="absolute -left-20  translate-x-[-10vh] z-20 top-[25vh] w-60 h-60 md:w-50 md:h-50">
+                        <img src="./assets/images/13.jpg"
+                            alt="Footer Decoration" class="w-full h-full object-cover rounded-full shadow-2xl">
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="font-bold text-slate-900 text-lg mb-6">Opening hours</h3>
+                    <ul class="text-sm text-gray-600 space-y-3">
+                        <li class="flex justify-between md:block">
+                            <span class="font-semibold block">Monday-Friday:</span>
+                            09:00AM - 06:00PM
+                        </li>
+                        <li class="flex justify-between md:block">
+                            <span class="font-semibold block">Saturday:</span>
+                            09:00AM - 04:00PM
+                        </li>
+                        <li class="flex justify-between md:block">
+                            <span class="font-semibold block text-red-400">Sunday:</span>
+                            Closed
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="font-bold text-slate-900 text-lg mb-6">Contact us</h3>
+                    <ul class="text-sm text-gray-600 space-y-3">
+                        <li class="leading-relaxed">
+                            Abomey-calavi, Atlantique, benin<br>
+                            Cotonou, Littoral, Bénin
+                        </li>
+                        <li class="font-medium text-slate-800">+229 01 53 94 79 16</li>
+                        <li class="text-[#FDBA31] font-medium underline">michoaganchiracdona@gmail.com</li>
+                    </ul>
+                </div>
+
+                <div class="relative space-y-4">
+                    <h3 class="font-bold text-slate-900 text-lg mb-6">Subscribe Us</h3>
+                    <div class="relative max-w-xs">
+                        <input type="email" placeholder="Your email..."
+                            class="w-full bg-white border border-[#FDBA31]/30 rounded-full py-3 px-6 outline-none focus:border-[#FDBA31] shadow-sm italic text-sm">
+                        <button
+                            class="absolute right-1 top-1 bg-[#FDBA31] text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-slate-900 transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="absolute -right-20  translate-x-[10vh] top-[25vh] w-60 h-60 md:w-50 md:h-50">
+                        <img src="./assets/images/15.jpg" alt="Flying Vegetables"
+                            class="w-full h-full rounded-full object-cover shadow-2xl">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-24 pt-8 border-t border-gray-200 text-center text-xs text-gray-400">
+                &copy; 2026 Fast Food Restaurant. All rights reserved.
+            </div>
+        </div>
+    </footer>
     <!-- end footer -->
 
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 3000, // Durée de l'animation en millisecondes
+            once: false,     // L'animation ne se joue qu'une seule fois au scroll
+            offset: 0,    // Déclenche l'animation 120px avant d'arriver sur l'élément
+        });
+    </script>
 </body>
 
 </html>
