@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link href="./output.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 
@@ -177,6 +178,168 @@ C 90,245  205,300  260,300
         </div>
     </section>
     <!-- end About us section -->
+
+
+    <!-- Most Popular Food -->
+    <section id="popular-food" class="py-24 px-6 md:px-16">
+        <div class="container mx-auto text-center py-10">
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-900" data-aos="fade-down">
+                Most Popular <span class="text-[#FDBA31]">Food</span>
+            </h2>
+        </div>
+
+        <div class="container  grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-10 mt-16 items-end">
+
+            <!-- Carte 1 -->
+            <div class="bg-white mb-20 rounded-[24px] shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-500"
+                data-aos="fade-up" data-aos-delay="100">
+                <!-- Image en haut de la carte -->
+                <div class="w-full h-30 orverflow-hidden">
+                    <img src="./assets/images/13.jpg" alt="Breakfast"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <!-- Contenu bas de carte -->
+                <div class="p-5 space-y-4">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-lg text-slate-800">Breakfast Food</h3>
+                        <button
+                            class="bg-[#FDBA31] text-[10px] px-3 py-1.5 rounded-md text-white font-bold uppercase tracking-tight hover:bg-slate-900 transition-colors">
+                            Add to cart
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center pt-3 border-t border-gray-100">
+                        <div class="flex text-[#FDBA31] text-xs space-x-0.5">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="font-bold text-base text-slate-900">₦ 15,000</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte 2 (milieu — surélevée + bordure jaune) -->
+            <div class="bg-white rounded-[24px] shadow-2xl  overflow-hidden group border-2 border-[#FDBA31] "
+                data-aos="fade-up" data-aos-delay="200">
+                <div class="w-full h-30 overflow-hidden">
+                    <img src="./assets/images/carly-jayne-Lv174o7fn7Y-unsplash.jpg" alt="Lunch"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5 space-y-4">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-lg text-slate-800">Lunch Food</h3>
+                        <button
+                            class="bg-[#FDBA31] text-[10px] px-3 py-1.5 rounded-md text-white font-bold uppercase tracking-tight hover:bg-slate-900 transition-colors">
+                            Add to cart
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center pt-3 border-t border-gray-100">
+                        <div class="flex text-[#FDBA31] text-xs space-x-0.5">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="font-bold text-base text-slate-900">₦ 25,000</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte 3 -->
+            <div class="bg-white rounded-[24px] shadow-lg mb-20 overflow-hidden group hover:shadow-2xl transition-all duration-500 "
+                data-aos="fade-up" data-aos-delay="300">
+                <div class="w-full h-30 overflow-hidden">
+                    <img src="./assets/images/10.jpg" alt="Dinner"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-5 space-y-4">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-lg text-slate-800">Dinner Food</h3>
+                        <button
+                            class="bg-[#FDBA31] text-[10px] px-3 py-1.5 rounded-md text-white font-bold uppercase tracking-tight hover:bg-slate-900 transition-colors">
+                            Add to cart
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center pt-3 border-t border-gray-100">
+                        <div class="flex text-[#FDBA31] text-xs space-x-0.5">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="font-bold text-base text-slate-900">₦ 45,000</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Pagination dots -->
+        <div class="flex justify-center mt-16 gap-3">
+            <button class="w-3 h-3 rounded-full bg-gray-300 hover:bg-[#FDBA31] transition-colors"></button>
+            <button class="w-3 h-3 rounded-full bg-[#FDBA31] shadow-md shadow-yellow-500/50"></button>
+            <button class="w-3 h-3 rounded-full bg-gray-300 hover:bg-[#FDBA31] transition-colors"></button>
+        </div>
+    </section>
+    <!-- End Most Popular Food -->
+
+
+
+    <!-- Why choose our Food? -->
+    <section id="features" class="py-24 px-6 md:px-16">
+        <div class="container mx-auto text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-900" data-aos="fade-down">
+                Why choose our <span class="text-[#FDBA31]">Food ?</span>
+            </h2>
+        </div>
+
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center ">
+
+            <div class="flex flex-col shadow-sm w-100 border-1 m-10  p-10 items-start text-left  space-y-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-12 h-12 bg-yellow-100/50 rounded-full flex items-center justify-center">
+                    <div class="w-8 h-8 bg-[#FDBA31] rounded-full flex items-center justify-center text-white">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L1 21h22L12 2zm0 3.45l8.27 14.3H3.73L12 5.45z" />
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900">Quality Food</h3>
+                <p class="text-gray-500 leading-relaxed text-sm">
+                    Keep healthy food readily available. when you get hungry you're more likely to eat
+                </p>
+            </div>
+
+            <div class="bg-white p-10 w-100 border-1 rounded-lg m-10 shadow-2xl shadow-white-200/200 flex flex-col items-start text-left space-y-4 z-10 border border-gray-50"
+                data-aos="zoom-in" data-aos-delay="200">
+                <div class="w-12 h-12 bg-yellow-100/50 rounded-full flex items-center justify-center">
+                    <div class="w-8 h-8 bg-[#FDBA31] rounded-full flex items-center justify-center text-white">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z" />
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900">Super Taste</h3>
+                <p class="text-gray-500 leading-relaxed text-sm">
+                    Keep healthy food readily available. when you get hungry you're more likely to eat
+                </p>
+            </div>
+
+            <div class="flex flex-col p-10 border-1 w-100 shadow-sm m-10 items-start text-left  space-y-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-12 h-12 bg-yellow-100/50 rounded-full flex items-center justify-center">
+                    <div class="w-8 h-8 bg-[#FDBA31] rounded-full flex items-center justify-center text-white">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900">Fast Delivery</h3>
+                <p class="text-gray-500 leading-relaxed text-sm">
+                    Keep healthy food readily available. when you get hungry you're more likely to eat
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <!-- En Why choose our Food? -->
+
+
 
     <!-- end main -->
 
