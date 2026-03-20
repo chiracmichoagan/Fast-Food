@@ -39,8 +39,10 @@
 </head>
 
 <body>
+
+
     <!-- Header -->
-    <Header class="pt-10">
+    <Header class="hidden md:block pt-10">
 
         <div class="flex">
             <!-- Logo -->
@@ -108,12 +110,42 @@
     <!-- end Header -->
 
 
+    <!-- Mobile Header -->
+    <header class="flex md:hidden items-center justify-between px-6 py-4">
+
+        <!-- Logo -->
+        <div class="font-bold text-xl text-slate-900">Fast Food</div>
+
+        <!-- Bouton burger -->
+        <button id="burger-btn" class="flex flex-col gap-1.5 z-50">
+            <span class="w-6 h-0.5 bg-slate-900 transition-all duration-300"></span>
+            <span class="w-6 h-0.5 bg-slate-900 transition-all duration-300"></span>
+            <span class="w-6 h-0.5 bg-slate-900 transition-all duration-300"></span>
+        </button>
+
+        <!-- Menu mobile (caché par défaut) -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center gap-8 -translate-x-full transition-transform duration-300">
+            <a href="#hero-mobile"
+                class="text-2xl font-bold text-slate-900 hover:text-[#FDBA31] transition-colors">Home</a>
+            <a href="#about" class="text-2xl font-bold text-slate-900 hover:text-[#FDBA31] transition-colors">About
+                Us</a>
+            <a href="#menu" class="text-2xl font-bold text-slate-900 hover:text-[#FDBA31] transition-colors">Menu</a>
+            <a href="#testimonials"
+                class="text-2xl font-bold text-slate-900 hover:text-[#FDBA31] transition-colors">Testimonials</a>
+            <a href="#footer" class="text-2xl font-bold text-slate-900 hover:text-[#FDBA31] transition-colors">Contact
+                us</a>
+        </div>
+
+    </header>
+    <!-- End Mobile Header -->
+
 
     <!-- main -->
     <main>
 
         <!-- Hero Section -->
-        <section id="hero" class="flex items-center gap-20 pb-20">
+        <section id="hero" class="flex hidden md:flex items-center gap-20 pb-20">
             <svg class="absolute  h-[100%] w-full -z-10 rounded-bl-[150px] md:rounded-bl-[300px] md:w-1/2 top-0 right-0"
                 viewBox="0 0 700 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="
@@ -184,8 +216,91 @@ C 90,245  205,300  260,300
         <!-- end Hero Section -->
 
 
+        <!-- Hero Mobile -->
+        <section id="hero-mobile" class="flex md:hidden flex-col relative overflow-hidden min-h-screen ">
+
+            <!-- Forme jaune -->
+            <svg class="absolute top-0  -right-[18vh] w-full h-[55%] -z-10" viewBox="0 0 700 300"
+                preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="
+      M 110,0
+      C 20,0  02,60  100,100
+      C 180,140  195,140  160,185
+      C 90,245  205,300  260,300
+      L 700,300
+      L 700,0
+      Z
+    " fill="#FFC529" />
+            </svg>
+
+
+            <!-- Texte -->
+            <div data-aos="fade-right" class=" mt-20 z-10">
+                <span class="text-orange-500 text-2xl font-bold border-l-4   border-orange-500 ml-3 text-sm">
+                    Fast Food Restaurant
+                </span>
+                <h1 class="text-2xl ml-3 font-bold mt-2">We Serve</h1>
+                <h2 class="text-2xl ml-3 font-bold text-gray-800 mt-1">
+                    Delicious <span class="text-orange-400">Food</span>
+                </h2>
+                <p class="text-black ml-5 mt-4 text-medium text-left rtl:text-right text-bodyleading-relaxed">
+                    Keep it easy with those simple <br> but delicious recipes
+                    from <br> make-ahead lunches and <br> midweek meals to
+                    fuss-free <br> sides.
+                </p>
+
+
+                <button
+                    class="bg-[#FFC529] mt-4 ml-10 text-center sm:mt-6 hover:bg-black hover:text-white transition-all duration-300 px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold shadow-lg text-xs sm:text-sm w-fit">
+                    ORDER NOW
+                </button>
+
+            </div>
+
+
+            <!-- Images -->
+            <div class="absolute top-0 right-0 flex justify-center items-center w-1/2 h-[55%] z-10">
+
+                <!-- Grande image centrale -->
+                <div data-aos="zoom-in-down"
+                    class="relative z-10 w-32 h-32  rounded-full border-[2px] border-white shadow-2xl overflow-hidden">
+                    <img src="./assets/images/anh-nguyen-kcA-c3f_3FE-unsplash.jpg" alt="Main Dish"
+                        class="w-full h-full object-cover">
+                </div>
+
+                <!-- Haut-droite -->
+                <div data-aos="zoom-in-down"
+                    class="absolute top-[15vh] right-2 w-14 h-14 rounded-full border-[2px] border-white shadow-xl overflow-hidden z-20">
+                    <img src="./assets/images/sina-piryae-bBzjWthTqb8-unsplash.jpg" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Bas-gauche -->
+                <div data-aos="zoom-in-down"
+                    class="absolute bottom-[12vh] left-10  w-12 h-12 rounded-full border-[2px] border-white shadow-xl overflow-hidden z-20">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=400"
+                        class="w-full h-full object-cover">
+                </div>
+
+                <!-- Bas-droite -->
+                <div data-aos="zoom-in-down"
+                    class="absolute bottom-[15vh] right-2 w-12 h-12 rounded-full border-[2px] border-white shadow-xl overflow-hidden z-20">
+                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&q=80&w=400"
+                        class="w-full h-full object-cover">
+                </div>
+
+            </div>
+
+
+        </section>
+        <!-- End Hero Mobile -->
+
+
+
+
+
+
         <!-- About us section -->
-        <section id="about" class="relative py-20 px-6 mt-20 p-0 m-0  mr-10 ml-20 md:px-16">
+        <section id="about" class="hidden md:flex relative py-20 px-6 mt-20 p-0 m-0  mr-10 ml-20 md:px-16">
             <div class="container mx-auto flex flex-col md:flex-row items-center  md:gap-0">
 
                 <!-- Partie gauche : image -->
@@ -236,6 +351,55 @@ C 90,245  205,300  260,300
             </div>
         </section>
         <!-- end About us section -->
+
+        <!-- About Mobile -->
+        <section id="about-mobile"
+            class="flex md:hidden flex-col relative py-10 px-6 pt-0 overflow-hidden  h-min-screen">
+
+            <!-- Zone image en haut -->
+            <div class="relative flex hidden md:flex justify-center items-center min-h-[320px]" data-aos="fade-down">
+
+                <!-- Forme jaune SVG -->
+                <svg class="absolute top-0 left-0 w-[65%] h-[95%] -z-10" viewBox="0 0 300 380"
+                    preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="
+        M 132 2 L 250 0 C 280 0 300 20 300 50 L 300 265 L 193 266 C -24 274 12 240 19 164 C 40 54 5 -1 77 1 Z
+      " fill="#FDBA31" />
+                </svg>
+
+                <!-- Image principale ronde -->
+                <div class="relative z-10 w-56 h-56 rounded-full overflow-hidden shadow-2xl ml-8">
+                    <img src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?auto=format&fit=crop&q=80"
+                        alt="About Food" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Boîte Gino -->
+                <div class="absolute -bottom-8 left-4 w-24 z-30 drop-shadow-2xl">
+                    <img src="./assets/images/tomate_boite.png" alt="Gino Tomato" class="w-full h-full object-contain">
+                </div>
+
+            </div>
+
+            <!-- Zone texte en bas -->
+            <div class="w-full space-y-4" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-slate-900">
+                    About <span class="text-[#FDBA31]">Us</span>
+                </h2>
+                <p class="text-gray-600 text-base leading-relaxed">
+                    Keep healthy food readily available. When you get hungry, you're more likely to eat the
+                    first thing you see on the counter. Keep health food readily available.
+                    When you get hungry, you're more likely to eat the first thing you see on the counter.
+                </p>
+                <button
+                    class="border-2 border-yellow-400 text-slate-900 px-8 py-3 rounded-full font-medium hover:bg-[#FDBA31] hover:border-[#FDBA31] transition-all duration-300">
+                    View more
+                </button>
+            </div>
+
+        </section>
+        <!-- End About Mobile -->
+
+
 
 
         <!-- Most Popular Food -->
@@ -480,7 +644,7 @@ C 90,245  205,300  260,300
 
                 <!-- Partie droite : image + forme jaune -->
                 <!-- Partie droite : image + forme jaune -->
-                <div class="w-full md:w-1/2 relative flex justify-center items-center min-h-[320px]"
+                <div class="w-full hidden md:flex md:w-1/2 relative flex justify-center items-center min-h-[320px]"
                     data-aos="fade-left">
 
                     <!-- Forme jaune SVG derrière -->
@@ -514,9 +678,9 @@ C 90,245  205,300  260,300
 
                 <div class="relative">
                     <h2 class="text-2xl font-bold tracking-tighter text-slate-900 mb-8">Fast Food</h2>
-                    <div class="absolute -left-20  translate-x-[-10vh] z-20 top-[25vh] w-60 h-60 md:w-50 md:h-50">
-                        <img src="./assets/images/13.jpg"
-                            alt="Footer Decoration" class="w-full h-full object-cover rounded-full shadow-2xl">
+                    <div class="absolute -left-20 hidden md:flex  translate-x-[-10vh] z-20 top-[25vh] w-60 h-60 md:w-50 md:h-50">
+                        <img src="./assets/images/13.jpg" alt="Footer Decoration"
+                            class="w-full h-full object-cover rounded-full shadow-2xl">
                     </div>
                 </div>
 
@@ -564,7 +728,7 @@ C 90,245  205,300  260,300
                         </button>
                     </div>
 
-                    <div class="absolute -right-20  translate-x-[10vh] top-[25vh] w-60 h-60 md:w-50 md:h-50">
+                    <div class="absolute -right-20 hidden md:flex  translate-x-[10vh] top-[25vh] w-60 h-60 md:w-50 md:h-50">
                         <img src="./assets/images/15.jpg" alt="Flying Vegetables"
                             class="w-full h-full rounded-full object-cover shadow-2xl">
                     </div>
@@ -586,6 +750,20 @@ C 90,245  205,300  260,300
             duration: 3000, // Durée de l'animation en millisecondes
             once: false,     // L'animation ne se joue qu'une seule fois au scroll
             offset: 0,    // Déclenche l'animation 120px avant d'arriver sur l'élément
+        });
+
+        const burgerBtn = document.getElementById('burger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        burgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('-translate-x-full');
+        });
+
+        // Fermer le menu quand on clique sur un lien
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('-translate-x-full');
+            });
         });
     </script>
 </body>
